@@ -1,0 +1,179 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.button {
+  background-color: #3498db;
+  padding: 1em 2em;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #257eb9;
+}
+
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 400px;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modalContent {
+  background-color: #ecf0f1;
+  margin: 20% auto;
+  width: 70%;
+  min-width: 500px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  animation-name: openmodel;
+  animation-duration: 1s;
+}
+
+.modalHeader {
+  background-color: #3498db;
+  padding: 15px;
+  color: #fff;
+}
+
+.modalHeader h2,
+.modalFooter h3 {
+  margin: 0;
+}
+
+.modalBody {
+  padding: 15px 25px;
+}
+
+.modalFooter {
+  background-color: #3498db;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.closeButton {
+  color: #fff;
+  float: right;
+  font-size: 30px;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+  color: yellow;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes openmodel {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+/* Styles for screens with a maximum width of 600 pixels (small screens) */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .modalContent {
+    margin: 10% auto;
+    width: 90%;
+    min-width: auto;
+    max-width: 400px;
+  }
+
+  .modalHeader {
+    padding: 10px;
+  }
+
+  .modalBody {
+    padding: 10px;
+  }
+
+  .modalFooter {
+    padding: 10px;
+  }
+
+  .closeButton {
+    font-size: 20px;
+  }
+}
+
+/* Styles for screens with a width between 601 pixels and 1024 pixels (medium screens) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 17px;
+  }
+
+  .modalContent {
+    margin: 15% auto;
+    width: 80%;
+    min-width: auto;
+    max-width: 800px;
+  }
+
+  .modalHeader {
+    padding: 15px;
+  }
+
+  .modalBody {
+    padding: 15px;
+  }
+
+  .modalFooter {
+    padding: 15px;
+  }
+
+  .closeButton {
+    font-size: 25px;
+  }
+}
+
+/* Styles for screens with a width greater than 1024 pixels (large screens) */
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+
+  .modalContent {
+    margin: 20% auto;
+    width: 70%;
+    min-width: 500px;
+    max-width: 1200px;
+  }
+
+  .modalHeader {
+    padding: 20px;
+  }
+
+  .modalBody {
+    padding: 20px;
+  }
+
+  .modalFooter {
+    padding: 20px;
+  }
+
+  .closeButton {
+    font-size: 30px;
+  }
+}
